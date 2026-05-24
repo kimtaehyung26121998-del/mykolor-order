@@ -460,6 +460,12 @@ export default function Home() {
       ...updated[index],
       [field]: value,
     };
+    if (
+  field === "qty" &&
+  value < 0
+) {
+  updated[index].qty = 0;
+}
 
     if (field === "finalPrice") {
 
@@ -725,24 +731,30 @@ const saveInvoiceImage = async () => {
                 <div className="grid grid-cols-2 gap-2 mt-3">
 
                   <input
-                    type="number"
-                    min={1}
-                    value={item.qty}
-                    onChange={(e) =>
-                      updateItem(
-                        index,
-                        "qty",
-                        Math.max(
-                          1,
-                          Number(
-                            e.target.value
-                          )
-                        )
-                      )
-                    }
-                    placeholder="SL"
-                    className="bg-white/10 border border-white/20 rounded-2xl p-3 text-sm outline-none"
-                  />
+  type="text"
+  inputMode="numeric"
+  value={
+    item.qty === 0
+      ? ""
+      : item.qty
+  }
+  onChange={(e) => {
+
+    const raw =
+      e.target.value.replace(/\D/g, "");
+
+    updateItem(
+      index,
+      "qty",
+      raw === ""
+        ? 0
+        : Number(raw)
+    );
+
+  }}
+  placeholder="SL"
+  className="bg-white/10 border border-white/20 rounded-2xl p-3 text-sm outline-none"
+/>
 
                   <input
                     value={item.basePrice.toLocaleString("vi-VN")}
@@ -909,16 +921,24 @@ const saveInvoiceImage = async () => {
     </th>
 
     <th className="border p-1 w-[55px]">
-      Sơn
-    </th>
+  ĐG Sơn
+</th>
 
-    <th className="border p-1 w-[55px]">
-      Màu
-    </th>
+<th className="border p-1 w-[55px]">
+  Sơn
+</th>
 
-    <th className="border p-1 w-[65px]">
-      Tổng
-    </th>
+<th className="border p-1 w-[55px]">
+  ĐG Màu
+</th>
+
+<th className="border p-1 w-[55px]">
+  Màu
+</th>
+
+<th className="border p-1 w-[65px]">
+  Tổng
+</th>
 
   </tr>
 
@@ -971,12 +991,20 @@ const saveInvoiceImage = async () => {
         </td>
 
         <td className="border p-1 text-right align-top">
-          {(paintTotal).toLocaleString("vi-VN")}
-        </td>
+  {(item.basePrice).toLocaleString("vi-VN")}
+</td>
 
-        <td className="border p-1 text-right align-top">
-          {(colorTotal).toLocaleString("vi-VN")}
-        </td>
+<td className="border p-1 text-right align-top">
+  {(paintTotal).toLocaleString("vi-VN")}
+</td>
+
+<td className="border p-1 text-right align-top">
+  {(item.colorPrice).toLocaleString("vi-VN")}
+</td>
+
+<td className="border p-1 text-right align-top">
+  {(colorTotal).toLocaleString("vi-VN")}
+</td>
 
         <td className="border p-1 text-right font-bold align-top">
           {(rowTotal).toLocaleString("vi-VN")}
