@@ -407,7 +407,7 @@ export default function Home() {
     useState("");
 
   const [selectedEmployee, setSelectedEmployee] =
-    useState(employees[0]);
+  useState<any>(null);
 
   const [orderItems, setOrderItems] = useState<
     OrderItem[]
@@ -573,7 +573,7 @@ const saveInvoiceImage = async () => {
             </label>
 
             <select
-              value={selectedEmployee.name}
+              value={selectedEmployee?.name || ""}
               onChange={(e) => {
 
                 const found = employees.find(
@@ -588,7 +588,13 @@ const saveInvoiceImage = async () => {
               }}
               className="w-full bg-white/10 border border-white/20 rounded-2xl p-3 text-sm outline-none"
             >
-
+<option
+  value=""
+  disabled
+  className="text-black"
+>
+  Chọn nhân viên
+</option>
               {employees.map((emp, index) => (
 
                 <option
@@ -863,7 +869,7 @@ const saveInvoiceImage = async () => {
               </p>
 
               <p className="text-[10px] mt-1">
-                SĐT: {selectedEmployee.phone}
+                SĐT: {selectedEmployee?.phone || ""}
               </p>
 
             </div>
@@ -1055,7 +1061,7 @@ const saveInvoiceImage = async () => {
       </p>
 
       <p className="mt-10">
-        {selectedEmployee.name}
+        {selectedEmployee?.name || ""}
       </p>
 
     </div>
