@@ -546,19 +546,61 @@ const saveInvoiceImage = async () => {
 
       });
 
-    const link =
-      document.createElement("a");
+    const response =
+  await fetch(dataUrl);
 
-    link.href = dataUrl;
+const blob =
+  await response.blob();
 
-    link.download =
-      `hoa-don-${Date.now()}.png`;
+const blobUrl =
+  URL.createObjectURL(blob);
 
-    document.body.appendChild(link);
+const today = new Date();
 
-    link.click();
+const yyyy =
+  today.getFullYear();
 
-    document.body.removeChild(link);
+const mm =
+  String(
+    today.getMonth() + 1
+  ).padStart(2, "0");
+
+const dd =
+  String(
+    today.getDate()
+  ).padStart(2, "0");
+
+const dateKey =
+  `${yyyy}${mm}${dd}`;
+
+const savedCount =
+  Number(
+    localStorage.getItem(dateKey) || "0"
+  ) + 1;
+
+localStorage.setItem(
+  dateKey,
+  String(savedCount)
+);
+
+const fileName =
+  `${dateKey}-${savedCount}.png`;
+
+const link =
+  document.createElement("a");
+
+link.href = blobUrl;
+
+link.download =
+  fileName;
+
+document.body.appendChild(link);
+
+link.click();
+
+document.body.removeChild(link);
+
+URL.revokeObjectURL(blobUrl);
 
   } catch (error) {
 
