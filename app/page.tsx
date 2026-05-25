@@ -904,45 +904,45 @@ const saveInvoiceImage = async () => {
 
           <div className="overflow-x-auto mt-4">
 
-            <table className="min-w-[720px] border text-[7px] md:text-[10px]">
+            <table className="min-w-[560px] border text-[4px] md:text-[8px] leading-tight">
 
               <thead className="bg-gray-100">
 
   <tr>
 
-    <th className="border p-1 min-w-[24px] w-[24px]">
+    <th className="border px-[1px] py-[2px] w-[16px]">
       STT
     </th>
 
-    <th className="border p-1 min-w-[160px]">
+    <th className="border px-[2px] py-[2px] min-w-[135px]">
   Sản phẩm
 </th>
 
-    <th className="border p-1 min-w-[55px]">
+    <th className="border px-[1px] py-[2px] w-[40px] break-words">
   Màu
 </th>
 
-    <th className="border p-1 w-[28px]">
+    <th className="border px-[2px] py-1 w-[28px]">
       SL
     </th>
 
-    <th className="border p-1 min-w-[58px]">
+    <th className="border px-[2px] py-1 w-[44px]">
   ĐG Sơn
 </th>
 
-<th className="border p-1 min-w-[58px]">
+<th className="border px-[2px] py-1 w-[44px]">
    Tổng tiền sơn
 </th>
 
-<th className="border p-1 min-w-[58px]">
+<th className="border px-[2px] py-1 w-[44px]">
   ĐG Màu
 </th>
 
-<th className="border p-1 min-w-[58px]">
+<th className="border px-[2px] py-1 w-[44px]">
   Tổng tiền màu
 </th>
 
-<th className="border p-1 w-[65px]">
+<th className="border px-[1px] py-[2px] w-[48px] break-words">
   Tổng
 </th>
 
@@ -972,11 +972,11 @@ const saveInvoiceImage = async () => {
 
       <tr key={index}>
 
-        <td className="border p-1 text-center align-top">
+        <td className="border px-[2px] py-1 text-center align-top">
           {index + 1}
         </td>
 
-        <td className="border p-1 align-top break-words min-w-[160px] leading-tight">
+        <td className="border px-[2px] py-[2px] align-top break-words min-w-[135px] leading-tight">
 
           <p className="leading-tight">
             {item.vn} - {item.size}
@@ -988,31 +988,31 @@ const saveInvoiceImage = async () => {
 
         </td>
 
-        <td className="border p-1 text-center align-top min-w-[70px] break-words">
+        <td className="border px-[2px] py-1 text-center align-top min-w-[70px] break-words">
   {item.colorCode}
 </td>
 
-        <td className="border p-1 text-center align-top">
+        <td className="border px-[2px] py-1 text-center align-top">
           {item.qty}
         </td>
 
-        <td className="border p-1 text-right align-top">
+        <td className="border px-[2px] py-1 text-right align-top">
   {(item.basePrice).toLocaleString("vi-VN")}
 </td>
 
-<td className="border p-1 text-right align-top">
+<td className="border px-[2px] py-1 text-right align-top">
   {(paintTotal).toLocaleString("vi-VN")}
 </td>
 
-<td className="border p-1 text-right align-top">
+<td className="border px-[2px] py-1 text-right align-top">
   {(item.colorPrice).toLocaleString("vi-VN")}
 </td>
 
-<td className="border p-1 text-right align-top">
+<td className="border px-[2px] py-1 text-right align-top">
   {(colorTotal).toLocaleString("vi-VN")}
 </td>
 
-        <td className="border p-1 text-right font-bold align-top">
+        <td className="border px-[2px] py-1 text-right font-bold align-top">
           {(rowTotal).toLocaleString("vi-VN")}
         </td>
 
