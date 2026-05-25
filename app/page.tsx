@@ -535,37 +535,8 @@ const saveInvoiceImage = async () => {
 
   try {
 
-    const clone = invoiceRef.current.cloneNode(true) as HTMLElement;
-
-    clone.style.width = "900px";
-
-    clone.style.maxWidth = "900px";
-
-    clone.style.background = "#ffffff";
-
-    clone.style.overflow = "visible";
-
-    clone.style.position = "fixed";
-
-    clone.style.left = "-99999px";
-
-    clone.style.top = "0";
-
-    // bỏ scroll table
-    clone
-      .querySelectorAll(".overflow-x-auto")
-      .forEach((el) => {
-
-        (
-          el as HTMLElement
-        ).style.overflow = "visible";
-
-      });
-
-    document.body.appendChild(clone);
-
     const dataUrl =
-      await toPng(clone, {
+      await toPng(invoiceRef.current, {
 
         cacheBust: true,
 
@@ -575,73 +546,19 @@ const saveInvoiceImage = async () => {
 
       });
 
-    document.body.removeChild(clone);
+    const link =
+      document.createElement("a");
 
-    const isIOS =
-      /iPad|iPhone|iPod/.test(
-        navigator.userAgent
-      );
+    link.href = dataUrl;
 
-    // IOS
-    if (isIOS) {
+    link.download =
+      `hoa-don-${Date.now()}.png`;
 
-      const newWindow =
-        window.open();
+    document.body.appendChild(link);
 
-      if (newWindow) {
+    link.click();
 
-        newWindow.document.write(`
-          <html>
-            <head>
-              <title>Hóa đơn</title>
-
-              <style>
-
-                body{
-                  margin:0;
-                  background:#111;
-                  display:flex;
-                  justify-content:center;
-                  align-items:flex-start;
-                }
-
-                img{
-                  width:100%;
-                  height:auto;
-                }
-
-              </style>
-
-            </head>
-
-            <body>
-
-              <img src="${dataUrl}" />
-
-            </body>
-
-          </html>
-        `);
-
-      }
-
-    } else {
-
-      const link =
-        document.createElement("a");
-
-      link.href = dataUrl;
-
-      link.download =
-        `hoa-don-${Date.now()}.png`;
-
-      document.body.appendChild(link);
-
-      link.click();
-
-      document.body.removeChild(link);
-
-    }
+    document.body.removeChild(link);
 
   } catch (error) {
 
@@ -1050,23 +967,23 @@ const saveInvoiceImage = async () => {
 
           {/* table */}
 
-          <div className="overflow-x-auto mt-4">
+          <div className="mt-4">
 
-            <table className="min-w-[560px] border text-[4px] md:text-[8px] leading-tight">
+            <table className="w-full border text-[5px] md:text-[8px] leading-tight table-auto">
 
               <thead className="bg-gray-100">
 
   <tr>
 
-    <th className="border px-[1px] py-[2px] w-[16px]">
+    <th className="border px-[1px] py-[1px] w-[12px]">
       STT
     </th>
 
-    <th className="border px-[2px] py-[2px] min-w-[135px]">
+    <th className="border px-[2px] py-[1px] w-[120px]">
   Sản phẩm
 </th>
 
-    <th className="border px-[1px] py-[2px] w-[40px] break-words">
+    <th className="border px-[1px] py-[1px] w-[28px] break-words">
   Màu
 </th>
 
@@ -1074,23 +991,23 @@ const saveInvoiceImage = async () => {
       SL
     </th>
 
-    <th className="border px-[2px] py-1 w-[44px]">
+    <th className="border px-[2px] py-1 w-[34px]">
   ĐG Sơn
 </th>
 
-<th className="border px-[2px] py-1 w-[44px]">
+<th className="border px-[2px] py-1 w-[34px]">
    Tổng tiền sơn
 </th>
 
-<th className="border px-[2px] py-1 w-[44px]">
+<th className="border px-[2px] py-1 w-[34px]">
   ĐG Màu
 </th>
 
-<th className="border px-[2px] py-1 w-[44px]">
+<th className="border px-[2px] py-1 w-[34px]">
   Tổng tiền màu
 </th>
 
-<th className="border px-[1px] py-[2px] w-[48px] break-words">
+<th className="border px-[1px] py-[1px] w-[38px] break-words">
   Tổng
 </th>
 
@@ -1124,7 +1041,7 @@ const saveInvoiceImage = async () => {
           {index + 1}
         </td>
 
-        <td className="border px-[2px] py-[2px] align-top break-words min-w-[135px] leading-tight">
+        <td className="border px-[1px] py-[1px] align-top break-words w-[120px] leading-tight">
 
           <p className="leading-tight">
             {item.vn} - {item.size}
