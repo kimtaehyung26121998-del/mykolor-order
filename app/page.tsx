@@ -931,7 +931,7 @@ const saveInvoiceImage = async () => {
 </th>
 
 <th className="border p-1 w-[55px]">
-  Sơn
+   Tổng tiền sơn
 </th>
 
 <th className="border p-1 w-[55px]">
@@ -939,7 +939,7 @@ const saveInvoiceImage = async () => {
 </th>
 
 <th className="border p-1 w-[55px]">
-  Màu
+  Tổng tiền màu
 </th>
 
 <th className="border p-1 w-[65px]">
