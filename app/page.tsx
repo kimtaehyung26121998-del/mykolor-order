@@ -535,23 +535,58 @@ const saveInvoiceImage = async () => {
 
   try {
 
-    const dataUrl = await toPng(
-      invoiceRef.current,
-      {
-        cacheBust: true,
-        pixelRatio: 2,
-      }
+    const originalOverflow =
+  invoiceRef.current.style.overflow;
+
+invoiceRef.current.style.overflow =
+  "visible";
+
+const dataUrl = await toPng(
+  invoiceRef.current,
+  {
+    cacheBust: true,
+    pixelRatio: 3,
+    canvasWidth:
+      invoiceRef.current.scrollWidth,
+    canvasHeight:
+      invoiceRef.current.scrollHeight,
+  }
+);
+
+invoiceRef.current.style.overflow =
+  originalOverflow;
+
+    const isIOS =
+  /iPad|iPhone|iPod/.test(
+    navigator.userAgent
+  );
+
+if (isIOS) {
+
+  const newTab =
+    window.open();
+
+  if (newTab) {
+
+    newTab.document.write(
+      `<img src="${dataUrl}" style="width:100%">`
     );
 
-    const link =
-      document.createElement("a");
+  }
 
-    link.download =
-      `hoa-don-${Date.now()}.png`;
+} else {
 
-    link.href = dataUrl;
+  const link =
+    document.createElement("a");
 
-    link.click();
+  link.download =
+    `hoa-don-${Date.now()}.png`;
+
+  link.href = dataUrl;
+
+  link.click();
+
+}
 
   } catch (error) {
 
