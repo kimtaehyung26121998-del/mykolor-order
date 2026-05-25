@@ -535,9 +535,7 @@ const saveInvoiceImage = async () => {
 
   try {
 
-    const clone =
-      invoiceRef.current.cloneNode(true)
-      as HTMLElement;
+    const clone = invoiceRef.current.cloneNode(true) as HTMLElement;
 
     clone.style.width = "900px";
 
