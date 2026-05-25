@@ -535,58 +535,77 @@ const saveInvoiceImage = async () => {
 
   try {
 
-    const originalOverflow =
-  invoiceRef.current.style.overflow;
+    const node = invoiceRef.current;
 
-invoiceRef.current.style.overflow =
-  "visible";
-
-const dataUrl = await toPng(
-  invoiceRef.current,
-  {
-    cacheBust: true,
-    pixelRatio: 3,
-    canvasWidth:
-      invoiceRef.current.scrollWidth,
-    canvasHeight:
-      invoiceRef.current.scrollHeight,
-  }
-);
-
-invoiceRef.current.style.overflow =
-  originalOverflow;
+    const dataUrl = await toPng(node, {
+      cacheBust: true,
+      pixelRatio: 3,
+      backgroundColor: "#ffffff",
+      canvasWidth: node.scrollWidth,
+      canvasHeight: node.scrollHeight,
+    });
 
     const isIOS =
-  /iPad|iPhone|iPod/.test(
-    navigator.userAgent
-  );
+      /iPad|iPhone|iPod/.test(
+        navigator.userAgent
+      );
 
-if (isIOS) {
+    // IOS
+    if (isIOS) {
 
-  const newTab =
-    window.open();
+      const imageWindow =
+        window.open("");
 
-  if (newTab) {
+      if (imageWindow) {
 
-    newTab.document.write(
-      `<img src="${dataUrl}" style="width:100%">`
-    );
+        imageWindow.document.write(`
+          <html>
+            <head>
+              <title>Hóa đơn</title>
+              <style>
+                body{
+                  margin:0;
+                  background:#111;
+                  display:flex;
+                  justify-content:center;
+                  align-items:center;
+                  min-height:100vh;
+                }
 
-  }
+                img{
+                  width:100%;
+                  height:auto;
+                }
+              </style>
+            </head>
 
-} else {
+            <body>
+              <img src="${dataUrl}" />
+            </body>
+          </html>
+        `);
 
-  const link =
-    document.createElement("a");
+      }
 
-  link.download =
-    `hoa-don-${Date.now()}.png`;
+    } else {
 
-  link.href = dataUrl;
+      // ANDROID + PC
 
-  link.click();
+      const link =
+        document.createElement("a");
 
-}
+      link.href = dataUrl;
+
+      link.download =
+        `hoa-don-${Date.now()}.png`;
+
+      document.body.appendChild(link);
+
+      link.click();
+
+      document.body.removeChild(link);
+
+    }
 
   } catch (error) {
 
@@ -595,6 +614,7 @@ if (isIOS) {
     alert("Không thể lưu ảnh");
 
   }
+
 };
 
   return (
