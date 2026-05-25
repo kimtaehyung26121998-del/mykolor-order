@@ -535,15 +535,49 @@ const saveInvoiceImage = async () => {
 
   try {
 
-    const node = invoiceRef.current;
+    const clone =
+      invoiceRef.current.cloneNode(true)
+      as HTMLElement;
 
-    const dataUrl = await toPng(node, {
-      cacheBust: true,
-      pixelRatio: 3,
-      backgroundColor: "#ffffff",
-      canvasWidth: node.scrollWidth,
-      canvasHeight: node.scrollHeight,
-    });
+    clone.style.width = "900px";
+
+    clone.style.maxWidth = "900px";
+
+    clone.style.background = "#ffffff";
+
+    clone.style.overflow = "visible";
+
+    clone.style.position = "fixed";
+
+    clone.style.left = "-99999px";
+
+    clone.style.top = "0";
+
+    // bỏ scroll table
+    clone
+      .querySelectorAll(".overflow-x-auto")
+      .forEach((el) => {
+
+        (
+          el as HTMLElement
+        ).style.overflow = "visible";
+
+      });
+
+    document.body.appendChild(clone);
+
+    const dataUrl =
+      await toPng(clone, {
+
+        cacheBust: true,
+
+        pixelRatio: 2,
+
+        backgroundColor: "#ffffff",
+
+      });
+
+    document.body.removeChild(clone);
 
     const isIOS =
       /iPad|iPhone|iPod/.test(
@@ -553,26 +587,47 @@ const saveInvoiceImage = async () => {
     // IOS
     if (isIOS) {
 
-  const link =
-    document.createElement("a");
+      const newWindow =
+        window.open();
 
-  link.href = dataUrl;
+      if (newWindow) {
 
-  link.target = "_blank";
+        newWindow.document.write(`
+          <html>
+            <head>
+              <title>Hóa đơn</title>
 
-  link.rel = "noopener noreferrer";
+              <style>
 
-  document.body.appendChild(link);
+                body{
+                  margin:0;
+                  background:#111;
+                  display:flex;
+                  justify-content:center;
+                  align-items:flex-start;
+                }
 
-  link.click();
+                img{
+                  width:100%;
+                  height:auto;
+                }
 
-  document.body.removeChild(link);
+              </style>
 
-}
+            </head>
+
+            <body>
+
+              <img src="${dataUrl}" />
+
+            </body>
+
+          </html>
+        `);
+
+      }
 
     } else {
-
-      // ANDROID + PC
 
       const link =
         document.createElement("a");
