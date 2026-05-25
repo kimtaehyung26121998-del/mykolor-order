@@ -553,39 +553,22 @@ const saveInvoiceImage = async () => {
     // IOS
     if (isIOS) {
 
-      const imageWindow =
-        window.open("");
+  const link =
+    document.createElement("a");
 
-      if (imageWindow) {
+  link.href = dataUrl;
 
-        imageWindow.document.write(`
-          <html>
-            <head>
-              <title>Hóa đơn</title>
-              <style>
-                body{
-                  margin:0;
-                  background:#111;
-                  display:flex;
-                  justify-content:center;
-                  align-items:center;
-                  min-height:100vh;
-                }
+  link.target = "_blank";
 
-                img{
-                  width:100%;
-                  height:auto;
-                }
-              </style>
-            </head>
+  link.rel = "noopener noreferrer";
 
-            <body>
-              <img src="${dataUrl}" />
-            </body>
-          </html>
-        `);
+  document.body.appendChild(link);
 
-      }
+  link.click();
+
+  document.body.removeChild(link);
+
+}
 
     } else {
 
