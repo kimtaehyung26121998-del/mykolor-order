@@ -405,6 +405,11 @@ export default function Home() {
 
   const [customerAddress, setCustomerAddress] =
     useState("");
+    const [discountPercent, setDiscountPercent] =
+  useState(0);
+
+const [customerDeposit, setCustomerDeposit] =
+  useState(0);
 
   const [selectedEmployee, setSelectedEmployee] =
   useState<any>(null);
@@ -517,7 +522,13 @@ export default function Home() {
   );
 
 }, 0);
+const finalAfterDiscount =
+  total *
+  ((100 - discountPercent) / 100);
 
+const remainingPayment =
+  finalAfterDiscount -
+  customerDeposit;
 const saveInvoiceImage = async () => {
 
   if (!invoiceRef.current) return;
@@ -639,6 +650,52 @@ const saveInvoiceImage = async () => {
 
           </div>
 
+<div className="grid grid-cols-2 gap-2 mt-3">
+
+  <input
+    placeholder="Mức chiết khấu (%)"
+    value={
+      discountPercent === 0
+        ? ""
+        : discountPercent
+    }
+    onChange={(e) => {
+
+      const raw =
+        e.target.value.replace(/\D/g, "");
+
+      setDiscountPercent(
+        raw === ""
+          ? 0
+          : Number(raw)
+      );
+
+    }}
+    className="w-full bg-white/10 border border-white/20 rounded-2xl p-3 text-sm outline-none"
+  />
+
+  <input
+    placeholder="Khách đã cọc"
+    value={
+      customerDeposit === 0
+        ? ""
+        : customerDeposit.toLocaleString("vi-VN")
+    }
+    onChange={(e) => {
+
+      const raw =
+        e.target.value.replaceAll(".", "");
+
+      const numberValue =
+        Math.max(0, Number(raw));
+
+      setCustomerDeposit(numberValue);
+
+    }}
+    className="w-full bg-white/10 border border-white/20 rounded-2xl p-3 text-sm outline-none"
+  />
+
+</div>
           {/* tìm sản phẩm */}
 
           <div className="mt-4">
@@ -1029,13 +1086,42 @@ const saveInvoiceImage = async () => {
 
           {/* tổng */}
 
-          <div className="mt-4 text-right">
+<div className="mt-4 text-right space-y-1">
 
-            <p className="text-lg font-bold">
-              Tổng: {total.toLocaleString("vi-VN")}đ
-            </p>
+  <p className="text-lg font-bold">
+    Tổng: {total.toLocaleString("vi-VN")}đ
+  </p>
 
-          </div>
+  <p className="text-sm">
+
+    Tổng sau chiết khấu
+    {" "}
+    {discountPercent}%:
+    {" "}
+
+    {finalAfterDiscount.toLocaleString("vi-VN")}đ
+
+  </p>
+
+  <p className="text-sm">
+
+    Khách đã cọc:
+    {" "}
+
+    {customerDeposit.toLocaleString("vi-VN")}đ
+
+  </p>
+
+  <p className="text-base font-bold text-red-600">
+
+    Còn phải thanh toán:
+    {" "}
+
+    {remainingPayment.toLocaleString("vi-VN")}đ
+
+  </p>
+
+</div>
          <div
   className="mt-10"
   style={{
