@@ -902,43 +902,43 @@ const saveInvoiceImage = async () => {
 
           {/* table */}
 
-          <div className="overflow-auto mt-4">
+          <div className="overflow-x-auto mt-4">
 
-            <table className="w-full border text-[8px] table-fixed">
+            <table className="min-w-[720px] border text-[7px] md:text-[10px]">
 
               <thead className="bg-gray-100">
 
   <tr>
 
-    <th className="border p-1 w-[24px]">
+    <th className="border p-1 min-w-[24px] w-[24px]">
       STT
     </th>
 
-    <th className="border p-1">
-      Sản phẩm
-    </th>
+    <th className="border p-1 min-w-[160px]">
+  Sản phẩm
+</th>
 
-    <th className="border p-1 w-[40px]">
-      Màu
-    </th>
+    <th className="border p-1 min-w-[55px]">
+  Màu
+</th>
 
     <th className="border p-1 w-[28px]">
       SL
     </th>
 
-    <th className="border p-1 w-[55px]">
+    <th className="border p-1 min-w-[58px]">
   ĐG Sơn
 </th>
 
-<th className="border p-1 w-[55px]">
+<th className="border p-1 min-w-[58px]">
    Tổng tiền sơn
 </th>
 
-<th className="border p-1 w-[55px]">
+<th className="border p-1 min-w-[58px]">
   ĐG Màu
 </th>
 
-<th className="border p-1 w-[55px]">
+<th className="border p-1 min-w-[58px]">
   Tổng tiền màu
 </th>
 
@@ -976,7 +976,7 @@ const saveInvoiceImage = async () => {
           {index + 1}
         </td>
 
-        <td className="border p-1 align-top">
+        <td className="border p-1 align-top break-words min-w-[160px] leading-tight">
 
           <p className="leading-tight">
             {item.vn} - {item.size}
@@ -988,9 +988,9 @@ const saveInvoiceImage = async () => {
 
         </td>
 
-        <td className="border p-1 text-center align-top">
-          {item.colorCode}
-        </td>
+        <td className="border p-1 text-center align-top min-w-[70px] break-words">
+  {item.colorCode}
+</td>
 
         <td className="border p-1 text-center align-top">
           {item.qty}
