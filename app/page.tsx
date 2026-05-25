@@ -979,11 +979,11 @@ const saveInvoiceImage = async () => {
       STT
     </th>
 
-    <th className="border px-[2px] py-[1px] w-[120px]">
+    <th className="border px-[2px] py-[1px] w-[160px]">
   Sản phẩm
 </th>
 
-    <th className="border px-[1px] py-[1px] w-[28px] break-words">
+    <th className="border px-[1px] py-[1px] w-[18px]">
   Màu
 </th>
 
@@ -1041,7 +1041,7 @@ const saveInvoiceImage = async () => {
           {index + 1}
         </td>
 
-        <td className="border px-[1px] py-[1px] align-top break-words w-[120px] leading-tight">
+        <td className="border px-[1px] py-[1px] align-top break-words w-[160px] leading-tight">
 
           <p className="leading-tight">
             {item.vn} - {item.size}
@@ -1053,8 +1053,8 @@ const saveInvoiceImage = async () => {
 
         </td>
 
-        <td className="border px-[2px] py-1 text-center align-top min-w-[70px] break-words">
-  {item.colorCode}
+        <td className="border px-[1px] py-[1px] text-center align-top w-[18px] overflow-hidden">
+  {item.colorCode?.slice(0, 6)}
 </td>
 
         <td className="border px-[2px] py-1 text-center align-top">
