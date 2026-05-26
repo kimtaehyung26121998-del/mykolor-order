@@ -1448,17 +1448,22 @@ const saveInvoiceImage = async () => {
   if (!invoiceRef.current) return;
 
   try {
+    await document.fonts.ready;
 
     const dataUrl =
-      await toPng(invoiceRef.current, {
+  await toPng(invoiceRef.current, {
 
-        cacheBust: true,
+    cacheBust: true,
 
-        pixelRatio: 2,
+    pixelRatio: 2,
 
-        backgroundColor: "#ffffff",
+    backgroundColor: "#ffffff",
 
-      });
+    useCORS: true,
+
+    skipFonts: false,
+
+  });
 
     const response =
   await fetch(dataUrl);
@@ -1965,10 +1970,10 @@ updateItem(
 
   </div>
 
-  <div
-    ref={invoiceRef}
-    className="bg-white rounded-[30px] p-4 overflow-auto"
-  >
+ <div
+  ref={invoiceRef}
+  className="bg-white rounded-[30px] p-4"
+>
 
           
 
@@ -1979,11 +1984,14 @@ updateItem(
              <img
   src={
     brand === "mykolor"
-  ? "/passion.png"
-  : "/anphat.png"
+      ? "/passion.png"
+      : "/anphat.png"
   }
   alt=""
-  className="w-[90px]"
+  crossOrigin="anonymous"
+  loading="eager"
+  decoding="sync"
+  className="w-[90px] object-contain"
 />
 
               <h2 className="font-bold text-xs mt-2">
@@ -1996,7 +2004,7 @@ updateItem(
 
               <p className="text-[10px] mt-1">
                 {
-  brand === "forich"
+  brand !== "mykolor"
     ? "Khu phố Lựa, Phường Quế Võ, Tỉnh Bắc Ninh"
     : "Lô D3, KCN Đại Đồng - Hoàn Sơn, Xã Đại Đồng, Tỉnh Bắc Ninh"
 }
