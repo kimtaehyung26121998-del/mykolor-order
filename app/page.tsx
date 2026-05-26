@@ -156,6 +156,13 @@ const products = [
   {
     vn: "Sơn nước nội thất bóng sang trọng",
     en: "MYKOLOR PASSION VIVID SHINE FOR INTERIOR - WHITE",
+    size: "1L",
+    basePrice: 446000,
+    canMixColor: true,
+  },
+  {
+    vn: "Sơn nước nội thất bóng sang trọng",
+    en: "MYKOLOR PASSION VIVID SHINE FOR INTERIOR - WHITE",
     size: "4.375L",
     basePrice: 2115000,
     canMixColor: true,
@@ -377,8 +384,351 @@ const products = [
     canMixColor: true,
   },
 ];
+const forichProducts = [
+  {
+  vn: "R65 - SEALER PRO",
+  en: "Sơn lót kháng kiềm nội thất cao cấp",
+  size: "5L",
+  basePrice: 750000,
+  canMixColor: false,
+  type: "interior-primer",
+},
 
+{
+  vn: "R65 - SEALER PRO",
+  en: "Sơn lót kháng kiềm nội thất cao cấp",
+  size: "18L",
+  basePrice: 2450000,
+  canMixColor: false,
+  type: "interior-primer",
+},
+
+{
+  vn: "R85 - ULTRA PRIMER",
+  en: "Sơn lót siêu kháng kiềm ngoại thất đặc biệt",
+  size: "5L",
+  basePrice: 1350000,
+  canMixColor: false,
+  type: "exterior-primer",
+},
+
+{
+  vn: "R85 - ULTRA PRIMER",
+  en: "Sơn lót siêu kháng kiềm ngoại thất đặc biệt",
+  size: "18L",
+  basePrice: 4200000,
+  canMixColor: false,
+  type: "exterior-primer",
+},
+
+{
+  vn: "R85(R90) - ULTRA PRIMER",
+  en: "Sơn lót siêu kháng kiềm ngoại thất đặc biệt",
+  size: "5L",
+  basePrice: 1850000,
+  canMixColor: false,
+  type: "exterior-primer",
+},
+
+{
+  vn: "R68 - SAPPHIRE",
+  en: "Sơn bóng ngọc trai nội thất cao cấp",
+  size: "5L",
+  basePrice: 1250000,
+  canMixColor: true,
+  type: "interior",
+},
+
+{
+  vn: "R68 - SAPPHIRE",
+  en: "Sơn bóng ngọc trai nội thất cao cấp",
+  size: "15L",
+  basePrice: 3380000,
+  canMixColor: true,
+  type: "interior",
+},
+
+{
+  vn: "R69 - PLATINUM",
+  en: "Sơn siêu bóng nội thất cao cấp 7 in 1",
+  size: "1L",
+  basePrice: 395000,
+  canMixColor: true,
+  type: "interior",
+},
+
+{
+  vn: "R69 - PLATINUM",
+  en: "Sơn siêu bóng nội thất cao cấp 7 in 1",
+  size: "5L",
+  basePrice: 1580000,
+  canMixColor: true,
+  type: "interior",
+},
+
+{
+  vn: "R69 - PLATINUM",
+  en: "Sơn siêu bóng nội thất cao cấp 7 in 1",
+  size: "15L",
+  basePrice: 4050000,
+  canMixColor: true,
+  type: "interior",
+},
+
+{
+  vn: "R69(NC99) - PLATINUM",
+  en: "Sơn siêu bóng nội thất cao cấp 7 in 1",
+  size: "1L",
+  basePrice: 455000,
+  canMixColor: true,
+  type: "interior",
+},
+
+{
+  vn: "R69(NC99) - PLATINUM",
+  en: "Sơn siêu bóng nội thất cao cấp 7 in 1",
+  size: "5L",
+  basePrice: 1750000,
+  canMixColor: true,
+  type: "interior",
+},
+
+{
+  vn: "R69(NC99) - PLATINUM",
+  en: "Sơn siêu bóng nội thất cao cấp 7 in 1",
+  size: "15L",
+  basePrice: 4880000,
+  canMixColor: true,
+  type: "interior",
+},
+
+{
+  vn: "R66 - SUPER WHITE",
+  en: "Sơn siêu trắng trần nội thất cao cấp",
+  size: "5L",
+  basePrice: 1300000,
+  canMixColor: false,
+  type: "interior",
+},
+
+{
+  vn: "R66 - SUPER WHITE",
+  en: "Sơn siêu trắng trần nội thất cao cấp",
+  size: "15L",
+  basePrice: 3550000,
+  canMixColor: false,
+  type: "interior",
+},
+
+{
+  vn: "R86(R35) - TITANIUM",
+  en: "Sơn bóng ngọc trai ngoại thất cao cấp",
+  size: "5L",
+  basePrice: 1550000,
+  canMixColor: true,
+  type: "exterior",
+},
+
+{
+  vn: "R86(R35) - TITANIUM",
+  en: "Sơn bóng ngọc trai ngoại thất cao cấp",
+  size: "15L",
+  basePrice: 4150000,
+  canMixColor: true,
+  type: "exterior",
+},
+
+{
+  vn: "R86 - TITANIUM",
+  en: "Sơn siêu bóng men sứ ngoại thất cao cấp 8 in 1",
+  size: "1L",
+  basePrice: 500000,
+  canMixColor: true,
+  type: "exterior",
+},
+
+{
+  vn: "R86 - TITANIUM",
+  en: "Sơn siêu bóng men sứ ngoại thất cao cấp 8 in 1",
+  size: "5L",
+  basePrice: 1980000,
+  canMixColor: true,
+  type: "exterior",
+},
+
+{
+  vn: "R86 - TITANIUM",
+  en: "Sơn siêu bóng men sứ ngoại thất cao cấp 8 in 1",
+  size: "15L",
+  basePrice: 4980000,
+  canMixColor: true,
+  type: "exterior",
+},
+
+{
+  vn: "R88 - SUPERSHIELD",
+  en: "Sơn siêu bóng ngoại thất kháng bám bẩn đặc biệt",
+  size: "1L",
+  basePrice: 750000,
+  canMixColor: true,
+  type: "exterior",
+},
+
+{
+  vn: "R88 - SUPERSHIELD",
+  en: "Sơn siêu bóng ngoại thất kháng bám bẩn đặc biệt",
+  size: "5L",
+  basePrice: 2880000,
+  canMixColor: true,
+  type: "exterior",
+},
+
+{
+  vn: "FCP - CLEAR PAINT",
+  en: "Sơn siêu bóng phủ trang trí Clear",
+  size: "1L",
+  basePrice: 480000,
+  canMixColor: false,
+  type: "exterior",
+},
+
+{
+  vn: "FCP - CLEAR PAINT",
+  en: "Sơn siêu bóng phủ trang trí Clear",
+  size: "5L",
+  basePrice: 1750000,
+  canMixColor: false,
+  type: "exterior",
+},
+
+{
+  vn: "R11A - WATERPROOF",
+  en: "Sơn chống thấm kết hợp xi măng cao cấp",
+  size: "5L",
+  basePrice: 1280000,
+  canMixColor: false,
+  type: "waterproof",
+},
+
+{
+  vn: "R11A - WATERPROOF",
+  en: "Sơn chống thấm kết hợp xi măng cao cấp",
+  size: "18L",
+  basePrice: 4250000,
+  canMixColor: false,
+  type: "waterproof",
+},
+
+{
+  vn: "R11M - COLORSHIELD",
+  en: "Sơn chống thấm pha màu cao cấp",
+  size: "5L",
+  basePrice: 1500000,
+  canMixColor: true,
+  type: "waterproof",
+},
+
+{
+  vn: "R11M - COLORSHIELD",
+  en: "Sơn chống thấm pha màu cao cấp",
+  size: "18L",
+  basePrice: 4750000,
+  canMixColor: true,
+  type: "waterproof",
+},
+
+{
+  vn: "BCC",
+  en: "Bột bả chống thấm đặc biệt nội & ngoại thất",
+  size: "20KG",
+  basePrice: 420000,
+  canMixColor: false,
+  type: "putty",
+},
+
+{
+  vn: "VAB",
+  en: "Bột bả ngoại thất cao cấp",
+  size: "40KG",
+  basePrice: 400000,
+  canMixColor: false,
+  type: "putty",
+},
+
+{
+  vn: "F500 - PRIMER",
+  en: "Sơn lót kháng kiềm nội thất",
+  size: "5L",
+  basePrice: 305000,
+  canMixColor: false,
+  type: "interior-primer",
+},
+
+{
+  vn: "F500 - PRIMER",
+  en: "Sơn lót kháng kiềm nội thất",
+  size: "18L",
+  basePrice: 950000,
+  canMixColor: false,
+  type: "interior-primer",
+},
+
+{
+  vn: "F600 - SEALER",
+  en: "Sơn lót kháng kiềm ngoại thất",
+  size: "5L",
+  basePrice: 550000,
+  canMixColor: false,
+  type: "exterior-primer",
+},
+
+{
+  vn: "F600 - SEALER",
+  en: "Sơn lót kháng kiềm ngoại thất",
+  size: "15L",
+  basePrice: 1650000,
+  canMixColor: false,
+  type: "exterior-primer",
+},
+
+{
+  vn: "F100 - INTERIOR",
+  en: "Sơn siêu mịn nội thất cao cấp",
+  size: "5L",
+  basePrice: 270000,
+  canMixColor: true,
+  type: "interior",
+},
+
+{
+  vn: "F100 - INTERIOR",
+  en: "Sơn siêu mịn nội thất cao cấp",
+  size: "18L",
+  basePrice: 830000,
+  canMixColor: true,
+  type: "interior",
+},
+
+{
+  vn: "F800 - EXTERIOR",
+  en: "Sơn siêu mịn ngoại thất cao cấp",
+  size: "1L",
+  basePrice: 590000,
+  canMixColor: true,
+  type: "exterior",
+},
+
+{
+  vn: "F800 - EXTERIOR",
+  en: "Sơn siêu mịn ngoại thất cao cấp",
+  size: "15L",
+  basePrice: 1830000,
+  canMixColor: true,
+  type: "exterior",
+},
+];
 type OrderItem = {
+  type?: string;
   vn: string;
   en: string;
   size: string;
@@ -413,18 +763,26 @@ const [customerDeposit, setCustomerDeposit] =
 
   const [selectedEmployee, setSelectedEmployee] =
   useState<any>(null);
+  const [brand, setBrand] =
+  useState<"select" | "mykolor" | "forich">(
+    "select"
+  );  
 
   const [orderItems, setOrderItems] = useState<
     OrderItem[]
   >([]);
 
+  const currentProducts =
+  brand === "forich"
+    ? forichProducts
+    : products;
   const filteredProducts = useMemo(() => {
-    return products.filter((product) =>
+    return currentProducts.filter((product) =>
       `${product.vn} ${product.en}`
         .toLowerCase()
         .includes(keyword.toLowerCase())
     );
-  }, [keyword]);
+  }, [keyword, brand]);
 
   const addProduct = (product: any) => {
 
@@ -434,6 +792,7 @@ const [customerDeposit, setCustomerDeposit] =
       vn: product.vn,
       en: product.en,
       size: product.size,
+      type: product.type,
 
       qty: 1,
 
@@ -482,6 +841,28 @@ const [customerDeposit, setCustomerDeposit] =
         );
 
     }
+    if (
+  brand === "forich" &&
+  field === "colorCode"
+) {
+
+  const item =
+    updated[index] as any;
+
+  const colorPrice =
+    getForichColorPrice(
+      value,
+      item.size,
+      item.type || ""
+    );
+
+  updated[index].colorPrice =
+    colorPrice;
+
+  updated[index].finalPrice =
+    item.basePrice + colorPrice;
+
+}
 
     setOrderItems(updated);
   };
@@ -529,6 +910,127 @@ const finalAfterDiscount =
 const remainingPayment =
   finalAfterDiscount -
   customerDeposit;
+  const getForichColorPrice = (
+  code: string,
+  size: string,
+  type: string
+) => {
+
+  const match =
+    code.match(/AP(\d+)-(\d)/i);
+
+  if (!match) return 0;
+
+  const number =
+    Number(match[1]);
+
+  const last =
+    Number(match[2]);
+
+  const isInterior =
+    type.includes("interior");
+
+  if (
+    number >= 1 &&
+    number <= 14
+  ) {
+
+    if (size === "1L") return 3500;
+    if (size === "5L") return 15000;
+    if (size === "15L" || size === "18L") return 50000;
+
+  }
+
+  if (
+    number >= 15 &&
+    number <= 22
+  ) {
+
+    if (size === "1L") return 5000;
+    if (size === "5L") return 22000;
+    if (size === "15L" || size === "18L") return 70000;
+
+  }
+
+  if (
+    number >= 23 &&
+    number <= 152 &&
+    [1,2,6].includes(last)
+  ) {
+
+    if (isInterior) {
+
+      if (size === "1L") return 14000;
+      if (size === "5L") return 60000;
+      if (size === "15L" || size === "18L") return 190000;
+
+    } else {
+
+      if (size === "1L") return 6500;
+      if (size === "5L") return 33500;
+      if (size === "15L" || size === "18L") return 100000;
+
+    }
+
+  }
+
+  if (
+    number >= 23 &&
+    number <= 152 &&
+    [3,5].includes(last)
+  ) {
+
+    if (isInterior) {
+
+      if (size === "1L") return 20000;
+      if (size === "5L") return 85000;
+      if (size === "15L" || size === "18L") return 270000;
+
+    } else {
+
+      if (size === "1L") return 22000;
+      if (size === "5L") return 100000;
+      if (size === "15L" || size === "18L") return 355000;
+
+    }
+
+  }
+
+  if (
+    number >= 23 &&
+    number <= 152 &&
+    last === 4
+  ) {
+
+    if (isInterior) {
+
+      if (size === "1L") return 30000;
+      if (size === "5L") return 135000;
+      if (size === "15L" || size === "18L") return 395000;
+
+    } else {
+
+      if (size === "1L") return 26500;
+      if (size === "5L") return 132500;
+      if (size === "15L" || size === "18L") return 420000;
+
+    }
+
+  }
+
+  if (
+    number >= 153 &&
+    number <= 171
+  ) {
+
+    if (size === "1L") return 36000;
+    if (size === "5L") return 180000;
+    if (size === "15L" || size === "18L") return 540000;
+
+  }
+
+  return 0;
+};
 const saveInvoiceImage = async () => {
 
   if (!invoiceRef.current) return;
@@ -611,7 +1113,38 @@ URL.revokeObjectURL(blobUrl);
   }
 
 };
+if (brand === "select") {
 
+  return (
+
+    <main className="min-h-screen bg-slate-950 flex items-center justify-center p-6">
+
+      <div className="w-full max-w-md space-y-4">
+
+        <button
+          onClick={() =>
+            setBrand("mykolor")
+          }
+          className="w-full bg-white text-black rounded-3xl p-6 text-2xl font-bold"
+        >
+          Lên đơn Mykolor
+        </button>
+
+        <button
+          onClick={() =>
+            setBrand("forich")
+          }
+          className="w-full bg-orange-500 text-white rounded-3xl p-6 text-2xl font-bold"
+        >
+          Lên đơn Forich
+        </button>
+
+      </div>
+
+    </main>
+
+  );
+}
   return (
     <main className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-3">
 
@@ -620,11 +1153,24 @@ URL.revokeObjectURL(blobUrl);
         {/* FORM */}
 
         <div className="backdrop-blur-xl bg-white/10 border border-white/20 rounded-[30px] shadow-2xl p-4 text-white">
+        <button
+  onClick={() =>
+    setBrand("select")
+  }
+  className="mb-3 bg-white/10 px-4 py-2 rounded-2xl text-sm"
+>
+  ← Quay lại
+</button>
 
           <h1 className="text-2xl font-bold mb-4">
-            Mykolor Order
-          </h1>
 
+  {
+    brand === "forich"
+      ? "Forich Order"
+      : "Mykolor Order"
+  }
+
+</h1>
           {/* nhân viên */}
 
           <div className="mb-3">
@@ -857,6 +1403,7 @@ URL.revokeObjectURL(blobUrl);
       e.target.value.replace(/\D/g, "");
 
     updateItem(
+      
       index,
       "qty",
       raw === ""
@@ -884,40 +1431,81 @@ URL.revokeObjectURL(blobUrl);
                     <input
                       placeholder="Mã màu"
                       value={item.colorCode}
-                      onChange={(e) =>
-                        updateItem(
-                          index,
-                          "colorCode",
-                          e.target.value
-                        )
-                      }
+                      onChange={(e) => {
+
+  const value =
+    e.target.value.toUpperCase();
+
+  // FORICH
+  if (brand === "forich") {
+
+  const regex =
+    /^(|A|AP|AP\d{0,3}|AP\d{0,3}-|AP\d{0,3}-\d?)$/
+
+  if (!regex.test(value)) {
+    return;
+  }
+
+}
+
+updateItem(
+  index,
+  "colorCode",
+  value
+);
+
+  
+
+}}
+                      
                       className="w-full bg-white/10 border border-white/20 rounded-2xl p-3 text-sm outline-none"
                     />
 
-                    <input
-  value={
-    item.finalPrice === 0
-      ? ""
-      : item.finalPrice.toLocaleString("vi-VN")
-  }
-  onChange={(e) => {
+    {
+  brand === "mykolor" ? (
 
-    const rawValue =
-      e.target.value.replaceAll(".", "");
+    <input
+      value={
+        item.finalPrice === 0
+          ? ""
+          : item.finalPrice.toLocaleString("vi-VN")
+      }
+      onChange={(e) => {
 
-    const numberValue =
-      Math.max(0, Number(rawValue));
+        const rawValue =
+          e.target.value.replaceAll(".", "");
 
-    updateItem(
-      index,
-      "finalPrice",
-      numberValue
-    );
+        const numberValue =
+          Math.max(0, Number(rawValue));
 
-  }}
-  placeholder="Nhập giá gồm sơn + màu"
-  className="w-full bg-white/10 border border-white/20 rounded-2xl p-3 text-sm outline-none"
-/>
+        updateItem(
+          index,
+          "finalPrice",
+          numberValue
+        );
+
+      }}
+      placeholder="Nhập giá gồm sơn + màu"
+      className="w-full bg-white/10 border border-white/20 rounded-2xl p-3 text-sm outline-none"
+    />
+
+  ) : (
+
+    <div className="w-full bg-white/5 border border-white/10 rounded-2xl p-3 text-sm">
+
+      Tiền màu:
+      {" "}
+
+      <span className="font-bold text-orange-300">
+
+        {item.colorPrice.toLocaleString("vi-VN")}đ
+
+      </span>
+
+    </div>
+
+  )
+}
 
                   </div>
 
@@ -941,7 +1529,14 @@ URL.revokeObjectURL(blobUrl);
 
     <button
       onClick={saveInvoiceImage}
-      className="bg-slate-900 text-white px-4 py-2 rounded-2xl text-sm"
+      className={`
+  text-white px-4 py-2 rounded-2xl text-sm
+  ${
+    brand === "forich"
+      ? "bg-orange-500"
+      : "bg-slate-900"
+  }
+`}
     >
       Lưu ảnh
     </button>
@@ -959,20 +1554,30 @@ URL.revokeObjectURL(blobUrl);
 
             <div>
 
-              <img
-                src="/passion.png"
-                className="w-24"
-              />
+             <img
+  src={
+    brand === "forich"
+      ? "/anphat.png"
+      : "/passion.png"
+  }
+  alt=""
+  className="w-[90px]"
+/>
 
               <h2 className="font-bold text-xs mt-2">
-                CHI NHÁNH CÔNG TY 4 ORANGES
-                CO,. LTD MIỀN BẮC
+                {
+  brand === "forich"
+    ? "CÔNG TY TNHH CÔNG NGHỆ AN PHÁT BẮC NINH"
+    : "CHI NHÁNH CÔNG TY 4 ORANGES CO,. LTD MIỀN BẮC"
+}
               </h2>
 
               <p className="text-[10px] mt-1">
-                Lô D3, KCN Đại Đồng -
-                Hoàn Sơn, Xã Đại Đồng,
-                Tỉnh Bắc Ninh
+                {
+  brand === "forich"
+    ? "Khu phố Lựa, Phường Quế Võ, Tỉnh Bắc Ninh"
+    : "Lô D3, KCN Đại Đồng - Hoàn Sơn, Xã Đại Đồng, Tỉnh Bắc Ninh"
+}
               </p>
 
               <p className="text-[10px] mt-1">
@@ -1074,6 +1679,7 @@ URL.revokeObjectURL(blobUrl);
     ? item.basePrice
     : item.finalPrice)
   * item.qty;
+
 
     return (
 
