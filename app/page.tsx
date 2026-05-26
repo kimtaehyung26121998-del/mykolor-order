@@ -1459,7 +1459,7 @@ const saveInvoiceImage = async () => {
 
     backgroundColor: "#ffffff",
 
-    useCORS: true,
+  
 
     skipFonts: false,
 
@@ -1864,7 +1864,10 @@ if (brand === "select") {
     e.target.value.toUpperCase();
 
   // FORICH
-  if (brand === "forich") {
+ if (
+  brand === "forich" ||
+  brand === "sunpro"
+) {
 
   const regex =
     /^(|A|AP|AP\d{0,3}|AP\d{0,3}-|AP\d{0,3}-\d?)$/
@@ -1983,10 +1986,10 @@ updateItem(
 
              <img
   src={
-    brand === "mykolor"
-      ? "/passion.png"
-      : "/anphat.png"
-  }
+  brand === "mykolor"
+    ? window.location.origin + "/passion.png"
+    : window.location.origin + "/anphat.png"
+}
   alt=""
   crossOrigin="anonymous"
   loading="eager"
