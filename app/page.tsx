@@ -727,6 +727,316 @@ const forichProducts = [
   type: "exterior",
 },
 ];
+const sunproProducts = [
+
+  {
+    vn: "SUN65 - SEALER PRO",
+    en: "Sơn lót kháng kiềm nội thất cao cấp",
+    size: "5L",
+    basePrice: 760000,
+    canMixColor: false,
+    type: "interior-primer",
+  },
+
+  {
+    vn: "SUN65 - SEALER PRO",
+    en: "Sơn lót kháng kiềm nội thất cao cấp",
+    size: "18L",
+    basePrice: 2460000,
+    canMixColor: false,
+    type: "interior-primer",
+  },
+
+  {
+    vn: "SUN65 (A656) - SEALER PRO",
+    en: "Sơn lót kháng kiềm nội thất cao cấp",
+    size: "5L",
+    basePrice: 1010000,
+    canMixColor: false,
+    type: "interior-primer",
+  },
+
+  {
+    vn: "SUN65 (A656) - SEALER PRO",
+    en: "Sơn lót kháng kiềm nội thất cao cấp",
+    size: "18L",
+    basePrice: 3310000,
+    canMixColor: false,
+    type: "interior-primer",
+  },
+
+  {
+    vn: "SUN68 - SEMI GLOSS",
+    en: "Sơn bóng SEMI nội thất cao cấp",
+    size: "5L",
+    basePrice: 1185000,
+    canMixColor: true,
+    type: "interior",
+  },
+
+  {
+    vn: "SUN68 - SEMI GLOSS",
+    en: "Sơn bóng SEMI nội thất cao cấp",
+    size: "18L",
+    basePrice: 3755000,
+    canMixColor: true,
+    type: "interior",
+  },
+
+  {
+    vn: "SUN69 - SUPER GLOSS",
+    en: "Sơn bóng nội thất cao cấp",
+    size: "1L",
+    basePrice: 425000,
+    canMixColor: true,
+    type: "interior",
+  },
+
+  {
+    vn: "SUN69 - SUPER GLOSS",
+    en: "Sơn bóng nội thất cao cấp",
+    size: "5L",
+    basePrice: 1505000,
+    canMixColor: true,
+    type: "interior",
+  },
+
+  {
+    vn: "SUN69 - SUPER GLOSS",
+    en: "Sơn bóng nội thất cao cấp",
+    size: "18L",
+    basePrice: 4935000,
+    canMixColor: true,
+    type: "interior",
+  },
+
+  {
+    vn: "SUN99 - TITANIUM",
+    en: "Sơn bóng cao cấp nội thất đặc biệt",
+    size: "1L",
+    basePrice: 525000,
+    canMixColor: true,
+    type: "interior",
+  },
+
+  {
+    vn: "SUN99 - TITANIUM",
+    en: "Sơn bóng cao cấp nội thất đặc biệt",
+    size: "5L",
+    basePrice: 1795000,
+    canMixColor: true,
+    type: "interior",
+  },
+
+  {
+    vn: "SUN99 - TITANIUM",
+    en: "Sơn bóng cao cấp nội thất đặc biệt",
+    size: "15L",
+    basePrice: 5285000,
+    canMixColor: true,
+    type: "interior",
+  },
+
+  {
+    vn: "SUN66 - SUPER WHITE",
+    en: "Sơn siêu trắng trần nội thất cao cấp",
+    size: "5L",
+    basePrice: 805000,
+    canMixColor: false,
+    type: "interior",
+  },
+
+  {
+    vn: "SUN66 - SUPER WHITE",
+    en: "Sơn siêu trắng trần nội thất cao cấp",
+    size: "18L",
+    basePrice: 2660000,
+    canMixColor: false,
+    type: "interior",
+  },
+
+  {
+    vn: "SUN66 (A706) - SUPER WHITE",
+    en: "Sơn siêu trắng trần nội thất cao cấp",
+    size: "5L",
+    basePrice: 1240000,
+    canMixColor: false,
+    type: "interior",
+  },
+
+  {
+    vn: "SUN66 (A706) - SUPER WHITE",
+    en: "Sơn siêu trắng trần nội thất cao cấp",
+    size: "18L",
+    basePrice: 4080000,
+    canMixColor: false,
+    type: "interior",
+  },
+
+  {
+    vn: "SUN85 - ULTRA PRIMER",
+    en: "Sơn lót kháng kiềm ngoại thất cao cấp",
+    size: "5L",
+    basePrice: 1145000,
+    canMixColor: false,
+    type: "exterior-primer",
+  },
+
+  {
+    vn: "SUN85 - ULTRA PRIMER",
+    en: "Sơn lót kháng kiềm ngoại thất cao cấp",
+    size: "18L",
+    basePrice: 3695000,
+    canMixColor: false,
+    type: "exterior-primer",
+  },
+
+  {
+    vn: "SUN85 (A696) - ULTRA PRIMER",
+    en: "Sơn lót kháng kiềm ngoại thất cao cấp",
+    size: "5L",
+    basePrice: 1405000,
+    canMixColor: false,
+    type: "exterior-primer",
+  },
+
+  {
+    vn: "SUN85 (A696) - ULTRA PRIMER",
+    en: "Sơn lót kháng kiềm ngoại thất cao cấp",
+    size: "18L",
+    basePrice: 4630000,
+    canMixColor: false,
+    type: "exterior-primer",
+  },
+
+  {
+    vn: "SUN86 - WEATHER SUN",
+    en: "Sơn siêu bóng ngoại thất cao cấp",
+    size: "1L",
+    basePrice: 515000,
+    canMixColor: true,
+    type: "exterior",
+  },
+
+  {
+    vn: "SUN86 - WEATHER SUN",
+    en: "Sơn siêu bóng ngoại thất cao cấp",
+    size: "5L",
+    basePrice: 1800000,
+    canMixColor: true,
+    type: "exterior",
+  },
+
+  {
+    vn: "SUN86 - WEATHER SUN",
+    en: "Sơn siêu bóng ngoại thất cao cấp",
+    size: "18L",
+    basePrice: 5755000,
+    canMixColor: true,
+    type: "exterior",
+  },
+
+  {
+    vn: "SUN88 - PLATINUM (NEW)",
+    en: "Sơn bóng cao cấp ngoại thất đặc biệt",
+    size: "1L",
+    basePrice: 705000,
+    canMixColor: true,
+    type: "exterior",
+  },
+
+  {
+    vn: "SUN88 - PLATINUM (NEW)",
+    en: "Sơn bóng cao cấp ngoại thất đặc biệt",
+    size: "5L",
+    basePrice: 2470000,
+    canMixColor: true,
+    type: "exterior",
+  },
+
+  {
+    vn: "SUN88 - PLATINUM (NEW)",
+    en: "Sơn bóng cao cấp ngoại thất đặc biệt",
+    size: "15L",
+    basePrice: 7320000,
+    canMixColor: true,
+    type: "exterior",
+  },
+
+  {
+    vn: "SUN33 - CLEAR PAINT",
+    en: "Sơn siêu bóng phủ trang trí Clear",
+    size: "1L",
+    basePrice: 460000,
+    canMixColor: false,
+    type: "exterior",
+  },
+
+  {
+    vn: "SUN33 - CLEAR PAINT",
+    en: "Sơn siêu bóng phủ trang trí Clear",
+    size: "5L",
+    basePrice: 1525000,
+    canMixColor: false,
+    type: "exterior",
+  },
+
+  {
+    vn: "SUN11A - WATERPROOF",
+    en: "Sơn chống thấm trộn xi măng cao cấp",
+    size: "5L",
+    basePrice: 1200000,
+    canMixColor: false,
+    type: "waterproof",
+  },
+
+  {
+    vn: "SUN11A - WATERPROOF",
+    en: "Sơn chống thấm trộn xi măng cao cấp",
+    size: "18L",
+    basePrice: 3895000,
+    canMixColor: false,
+    type: "waterproof",
+  },
+
+  {
+    vn: "SUN12A - COLOR WATERPROOF",
+    en: "Sơn chống thấm pha màu cao cấp",
+    size: "5L",
+    basePrice: 1450000,
+    canMixColor: true,
+    type: "waterproof",
+  },
+
+  {
+    vn: "SUN12A - COLOR WATERPROOF",
+    en: "Sơn chống thấm pha màu cao cấp",
+    size: "18L",
+    basePrice: 4695000,
+    canMixColor: true,
+    type: "waterproof",
+  },
+
+  {
+    vn: "BCC",
+    en: "Bột bả chống thấm đặc biệt nội & ngoại thất",
+    size: "20KG",
+    basePrice: 490000,
+    canMixColor: false,
+    type: "putty",
+  },
+
+  {
+    vn: "BCC",
+    en: "Bột bả chống thấm đặc biệt nội & ngoại thất",
+    size: "40KG",
+    basePrice: 980000,
+    canMixColor: false,
+    type: "putty",
+  },
+
+];
+
 type OrderItem = {
   type?: string;
   vn: string;
@@ -764,17 +1074,24 @@ const [customerDeposit, setCustomerDeposit] =
   const [selectedEmployee, setSelectedEmployee] =
   useState<any>(null);
   const [brand, setBrand] =
-  useState<"select" | "mykolor" | "forich">(
+  useState<
+    "select" |
+    "mykolor" |
+    "forich" |
+    "sunpro"
+  >(
     "select"
-  );  
+  ); 
 
   const [orderItems, setOrderItems] = useState<
     OrderItem[]
   >([]);
 
-  const currentProducts =
+ const currentProducts =
   brand === "forich"
     ? forichProducts
+    : brand === "sunpro"
+    ? sunproProducts
     : products;
   const filteredProducts = useMemo(() => {
     return currentProducts.filter((product) =>
@@ -842,7 +1159,10 @@ const [customerDeposit, setCustomerDeposit] =
 
     }
     if (
-  brand === "forich" &&
+  (
+    brand === "forich" ||
+    brand === "sunpro"
+  ) &&
   field === "colorCode"
 ) {
 
@@ -850,11 +1170,16 @@ const [customerDeposit, setCustomerDeposit] =
     updated[index] as any;
 
   const colorPrice =
-    getForichColorPrice(
-      value,
-      item.size,
-      item.type || ""
-    );
+  brand === "sunpro"
+    ? getSunproColorPrice(
+        value,
+        item.size
+      )
+    : getForichColorPrice(
+        value,
+        item.size,
+        item.type || ""
+      );
 
   updated[index].colorPrice =
     colorPrice;
@@ -1031,6 +1356,93 @@ const remainingPayment =
 
   return 0;
 };
+const getSunproColorPrice = (
+  code: string,
+  size: string
+) => {
+
+  const match =
+    code.match(/AP(\d+)-(\d)/i);
+
+  if (!match) return 0;
+
+  const number =
+    Number(match[1]);
+
+  const last =
+    Number(match[2]);
+
+  if (
+    number >= 1 &&
+    number <= 14
+  ) {
+
+    if (size === "1L") return 3000;
+    if (size === "5L") return 14000;
+    if (size === "15L" || size === "18L") return 50000;
+
+  }
+
+  if (
+    number >= 15 &&
+    number <= 22
+  ) {
+
+    if (size === "1L") return 4000;
+    if (size === "5L") return 20000;
+    if (size === "15L" || size === "18L") return 70000;
+
+  }
+
+  if (
+    number >= 23 &&
+    number <= 152 &&
+    [1,2,6].includes(last)
+  ) {
+
+    if (size === "1L") return 6000;
+    if (size === "5L") return 31000;
+    if (size === "15L" || size === "18L") return 100000;
+
+  }
+
+  if (
+    number >= 23 &&
+    number <= 152 &&
+    [3,5].includes(last)
+  ) {
+
+    if (size === "1L") return 20000;
+    if (size === "5L") return 100000;
+    if (size === "15L" || size === "18L") return 360000;
+
+  }
+
+  if (
+    number >= 23 &&
+    number <= 152 &&
+    last === 4
+  ) {
+
+    if (size === "1L") return 25000;
+    if (size === "5L") return 125000;
+    if (size === "15L" || size === "18L") return 450000;
+
+  }
+
+  if (
+    number >= 153 &&
+    number <= 171
+  ) {
+
+    if (size === "1L") return 33500;
+    if (size === "5L") return 167000;
+    if (size === "15L" || size === "18L") return 600000;
+
+  }
+
+  return 0;
+};
 const saveInvoiceImage = async () => {
 
   if (!invoiceRef.current) return;
@@ -1138,6 +1550,14 @@ if (brand === "select") {
         >
           Lên đơn Forich
         </button>
+        <button
+  onClick={() =>
+    setBrand("sunpro")
+  }
+  className="w-full bg-yellow-500 text-black rounded-3xl p-6 text-2xl font-bold"
+>
+  Lên đơn Sunpro
+</button>
 
       </div>
 
@@ -1166,8 +1586,10 @@ if (brand === "select") {
 
   {
     brand === "forich"
-      ? "Forich Order"
-      : "Mykolor Order"
+  ? "Forich Order"
+  : brand === "sunpro"
+  ? "Sunpro Order"
+  : "Mykolor Order"
   }
 
 </h1>
@@ -1556,9 +1978,9 @@ updateItem(
 
              <img
   src={
-    brand === "forich"
-      ? "/anphat.png"
-      : "/passion.png"
+    brand === "mykolor"
+  ? "/passion.png"
+  : "/anphat.png"
   }
   alt=""
   className="w-[90px]"
@@ -1566,7 +1988,7 @@ updateItem(
 
               <h2 className="font-bold text-xs mt-2">
                 {
-  brand === "forich"
+  brand !== "mykolor"
     ? "CÔNG TY TNHH CÔNG NGHỆ AN PHÁT BẮC NINH"
     : "CHI NHÁNH CÔNG TY 4 ORANGES CO,. LTD MIỀN BẮC"
 }
